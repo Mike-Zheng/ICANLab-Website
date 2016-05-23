@@ -2,6 +2,7 @@
 
 ##檔案
 
+```js
 web
 ├dev
 │ ├js/
@@ -13,6 +14,8 @@ web
 ├view/
 ├routes/
 └ican.js
+
+```
 
 ##開發
 
