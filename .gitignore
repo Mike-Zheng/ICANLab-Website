@@ -1,0 +1,6 @@
+# Ignore Mac DS_Store files
+*.log 
+*.DS_Store
+*.DS_Store
+[Tt]humbs.db 
+node_modules
