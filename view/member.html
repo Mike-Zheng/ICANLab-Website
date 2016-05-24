@@ -13,7 +13,7 @@
     <script src="js/esoe.js"></script>
 </head>
 
-<body class="page">
+<body class="member">
     <div class="header">
         <div class="brand">
             <div class="logo"><img src="image/logo.png" alt=""></div>
@@ -37,21 +37,75 @@
                     </div>
                 </a>
             </div>
-            <input class="search" placeholder="搜尋" type="text">
+            <input class="esoe-search" placeholder="搜尋" type="text">
         </div>
         <div class="right-panel-rwd"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
-    <div class="screen">
-        <div class="video-container">
-            <video autoplay="" loop="" muted="" class="video hidden-xs">
-                <source src="image/background.mp4" type="video/mp4">
-                <source src="image/background.webm" type="video/webm">
-            </video>
+    <div class="dropdown-rwd">
+        <div class="nav">
+            <a href="/">
+                <div class="nav-li ">
+                    首頁
+                </div>
+            </a>
+            <a href="/member">
+                <div class="nav-li active">
+                    成員
+                </div>
+            </a>
+            <a href="/research">
+                <div class="nav-li">
+                    研究
+                </div>
+            </a>
+            <div class="nav-li">
+                <input class="esoe-search" placeholder="搜尋" type="text">
+            </div>
         </div>
     </div>
+    <div class="side">
+        <ul class="side-bar">
+            <a href="">
+                <li class="side-bar-list blue active">博士班</li>
+            </a>
+            <a href="">
+                <li class="side-bar-list red ">碩士班</li>
+            </a>
+        </ul>
+    </div>
     <div class="content">
-        <div class="main-title"> 成員</div>
-        <div class="sub-title"></div>
+        <div class="title"> 成員介紹 / 博士班</div>
+        <div class="card-list">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-degree">博士班</div>
+                    <div class="card-name">陳志昇</div>
+                    <div class="card-image"></div>
+                    <div class="card-email">
+                        <div class="email-name">email</div>
+                        <div class="email">shan@gmail.com</div>
+                    </div>
+                    <div class="card-domain">
+                        <div class="domain-name">領域</div>
+                        <div class="domain">網路與數位教育</div>
+                    </div>
+                </div>
+                <div class="card-meta">
+                    <div class="card-meta-block">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <span>博七</span>
+                    </div>
+                    <div class="card-meta-block md">
+                        <i class="fa fa-files-o" aria-hidden="true"></i>
+                        <span>論文</span>
+                    </div>
+                    <div class="card-meta-block">
+                        <i class="fa fa-book red" aria-hidden="true"></i>
+                        <span>研究</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
