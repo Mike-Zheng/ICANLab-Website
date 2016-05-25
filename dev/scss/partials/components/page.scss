@@ -118,6 +118,9 @@
 .member {
     .side {
         width: 100px;
+        @media (max-width: 768px) {
+            width: 50px;
+        }
         position: fixed;
         left: 0;
         top: 60px;
@@ -128,6 +131,9 @@
         .side-bar {
             height: calc(100% - 60px);
             width: 100px;
+            @media (max-width: 768px) {
+                width: 50px;
+            }
             overflow: hidden;
             list-style: none;
             margin: 0;
@@ -138,6 +144,9 @@
                 text-align: center;
                 line-height: 60px;
                 font-size: 24px;
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
                 -webkit-transition: all 500ms ease-out;
                 -moz-transition: all 500ms ease-out;
                 transition: all 500ms ease-out;
@@ -227,12 +236,21 @@
     .content {
         margin-top: 60px;
         margin-left: 100px;
+        @media (max-width: 768px) {
+            margin-left: 20px;
+        }
+        @media (max-width: 330px) {
+            margin-left: 0px;
+        }
         .title {
             line-height: 36px;
             padding-top: 45px;
             margin-left: 50px;
             color: #455B73;
             font-size: 36px;
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -330,9 +348,9 @@
             box-shadow: 0 2px 4px 0 #737373;
             line-height: 18px;
             .card-meta-block {
-                -webkit-transition: all 500ms ease-out;
-                -moz-transition: all 500ms ease-out;
-                transition: all 500ms ease-out;
+                -webkit-transition: all 200ms ease-out;
+                -moz-transition: all 200ms ease-out;
+                transition: all 200ms ease-out;
                 display: inline-block;
                 text-align: center;
                 width: 85px;
