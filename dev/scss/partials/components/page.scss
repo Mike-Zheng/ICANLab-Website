@@ -375,3 +375,160 @@
         }
     }
 }
+
+.research {
+    // background: #1F2830;
+    background-image: url(../image/01.png);
+    background-size: 15px;
+    .screen {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        max-height: 70vw;
+        overflow: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 25px 0;
+        &:before {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            background-color: #222;
+            background-image: url(../image/01.png);
+            background-size: 10px;
+            opacity: 0.6;
+        }
+        .background-container {
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            background-color: #313746;
+        }
+    }
+    .content-panel {
+        position: absolute;
+        top: 95px;
+        left: 40px;
+        right: 40px;
+        // bottom: 35px;
+        border-radius: 5px;
+        /* transform: translateX(-50%); */
+        // text-align: center;
+        z-index: 3;
+        background-color: #000;
+        box-shadow: 0 2px 4px 0 #000;
+        .content-tags {
+            padding: 0px 17px;
+            line-height: 40px;
+            height: 40px;
+            .tags-border {
+                border-bottom: 2px #2D2F32 solid;
+                // overflow-y: hidden;
+                height: 42px;
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                .tag {
+                    display: inline-block;
+                    font-size: 16px;
+                    color: #313746;
+                    margin-right: 24px;
+                    -webkit-transition: all 250ms ease-out;
+                    -moz-transition: all 250ms ease-out;
+                    transition: all 250ms ease-out;
+                    cursor: pointer;
+                    &.active {
+                        border-bottom: 2px #94C500 solid;
+                        color: #FFF;
+                    }
+                    &:hover {
+                        border-bottom: 2px #94C500 solid;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            // /top: 250px;
+        }
+    }
+}
+
+.research-cards {
+    padding: 0 15px;
+    margin-top: 25px;
+    .research-card {
+        height: 150px;
+        width: 300px;
+        border-radius: 2px;
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 0px 20px 20px;
+        .card-image {
+            position: absolute;
+            height: 150px;
+            width: 300px;
+            // background-image: url(../image/research-01.jpg);
+            background-size: contain;
+            opacity: 0.4;
+            -webkit-transition: all 250ms ease-out;
+            -moz-transition: all 250ms ease-out;
+            transition: all 250ms ease-out;
+            &:hover {
+                opacity: 0.2;
+            }
+        }
+        .research-title {
+            color: #FFF;
+            padding: 30px 20px 20px 20px;
+            overflow-wrap: break-word;
+            line-height: 20px;
+            word-break: break-all;
+            font-size: 20px;
+        }
+        .research-author {
+            font-size: 10px;
+            color: #FFF;
+            text-align: center;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    margin-right: 4px;
+    height: 4px !important;
+    overflow: visible !important;
+    width: 12px !important;
+}
+
+::-webkit-scrollbar-button {
+    height: 0px !important;
+    width: 0px !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5) !important;
+    background-clip: padding-box !important;
+    border: 4px solid transparent !important;
+    border-image: initial !important;
+    min-height: 20px !important;
+    padding: 50px 0px 0px !important;
+    opacity: .6;
+    border-radius: 2px;
+    transition: all 350ms ease !important;
+}
