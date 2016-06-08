@@ -13,6 +13,9 @@ module.exports = function(app) {
         res.sendfile('./view/research.html');
     });
 
+    app.get('/search', function(req, res) {
+        res.sendfile('./view/search.html');
+    });
 
     //api
     app.get('/api1', function(req, res) {

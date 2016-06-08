@@ -7,7 +7,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="image/logo_o.png"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="KeyWords" content="ntu esoe ican lab">
+    <meta name="KeyWords" content="台灣大學 台大 工科 工程科學 智慧計算與網路實驗室">
+    <meta name="og:title" content="國立台灣大學工程科學研究所-智慧計算與網路實驗室">
+    <meta name="og:description" content="國立台灣大學工程科學研究所-智慧計算與網路實驗室">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="image/ogimg.png">
+    <meta name="author" content="mikeZheng">
     <title> 國立台灣大學工程科學研究所-智慧計算與網路實驗室</title>
     <link rel="stylesheet" href="css/esoe.css">
     <script src="js/esoe.js"></script>
@@ -37,7 +45,9 @@
                     </div>
                 </a>
             </div>
-            <input class="esoe-search" placeholder="搜尋" type="text">
+            <form style="display: inline-block;" action="/search">
+                <input placeholder="搜尋" type="text" name="q" id="tipue_search_input" class="esoe-search" autocomplete="off" required>
+            </form>
         </div>
         <div class="right-panel-rwd"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
@@ -59,28 +69,33 @@
                 </div>
             </a>
             <div class="nav-li">
-                <input class="esoe-search" placeholder="搜尋" type="text">
+                <form style="display: inline-block;" action="/search">
+                    <input placeholder="搜尋" type="text" name="q" id="tipue_search_input" class="esoe-search" autocomplete="off" required>
+                </form>
             </div>
         </div>
     </div>
     <div class="side">
         <ul class="side-bar">
-            <a href="">
-                <li class="side-bar-list blue active">博士班</li>
+            <a href="javascript:void(0)">
+                <li class="side-bar-list blue active"><div id='student'>碩士班<div></li>
             </a>
-            <a href="">
-                <li class="side-bar-list red ">碩士班</li>
+            <a href="javascript:void(0)">
+                <li class="side-bar-list red "><div id='teacher'>老師<div></li>
             </a>
         </ul>
     </div>
     <div class="content">
-        <div class="title"> 成員介紹 / 博士班</div>
+        <div class="title"> 成員介紹 / 碩士班</div>
         <div class="card-list">
-            <div class="card">
+      <div id='list_append'>
+      </div>
+<!--  
+   <div class="card">
                 <div class="card-content">
                     <div class="card-degree">博士班</div>
                     <div class="card-name">陳志昇</div>
-                    <div class="card-image"></div>
+                    <div class="card-image" style=" background-image: url(../image/avatar02.jpg);"></div>
                     <div class="card-email">
                         <div class="email-name">email</div>
                         <div class="email">shan@gmail.com</div>
@@ -105,22 +120,7 @@
                     </div>
                 </div>
             </div>
-<!--  -->
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-<div class="card"><div class="card-content"><div class="card-degree">博士班</div><div class="card-name">陳志昇</div><div class="card-image"></div><div class="card-email"><div class="email-name">email</div><div class="email">shan@gmail.com</div></div><div class="card-domain"><div class="domain-name">領域</div><div class="domain">網路與數位教育</div></div></div><div class="card-meta"><div class="card-meta-block"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>博七</span></div><div class="card-meta-block md"><i class="fa fa-files-o" aria-hidden="true"></i><span>論文</span></div><div class="card-meta-block"><i class="fa fa-book red" aria-hidden="true"></i><span>研究</span></div></div></div>
-
-
-
-            <!--  -->
+            -->
         </div>
     </div>
 </body>

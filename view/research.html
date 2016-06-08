@@ -7,10 +7,62 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="image/logo_o.png"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-    <title> 國立台灣大學工程科學研究所-智慧計算與網路實驗室</title>
-    <link rel="stylesheet" href="css/esoe.css">
+    <meta name="KeyWords" content="ntu esoe ican lab">
+    <meta name="KeyWords" content="台灣大學 台大 工科 工程科學 智慧計算與網路實驗室">
+    <meta name="og:title" content="國立台灣大學工程科學研究所-智慧計算與網路實驗室">
+    <meta name="og:description" content="國立台灣大學工程科學研究所-智慧計算與網路實驗室">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="image/ogimg.png">
+    <meta name="author" content="mikeZheng">
+    <title> 國立台灣大學工程科學研究所-智慧計算與網路實驗室</title><link rel="stylesheet" href="css/esoe.css">
+    <link href="tipuesearch/tipuesearch.css" rel="stylesheet">
     <script src="js/esoe.js"></script>
+    <script src="tipuesearch/tipuesearch_content.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.each(tipuesearch.pages, function(index, obj) {
+                var element = renderHtml(obj.title, obj.text);
+                $(".research-cards").append(element);
+                $(".research-card:last").data('url', obj.url);
+            });
+         });
+
+        $(document).on("click", ".research-card", function() {
+            window.location = $(this).data("url");
+        });
+
+        $(document).on("click", ".tag", function() {
+            $(".tag").removeClass('active');
+            $(this).addClass('active');
+            var year = $(this).attr("year");
+
+            $(".research-cards").empty();
+            $.each(tipuesearch.pages, function(index, obj) {
+                if(obj.tags === year) {
+                    var element = renderHtml(obj.title, obj.text);
+                    $(".research-cards").append(element);
+                    $(".research-card:last").data('url', obj.url);
+               }
+               else if(year === "all"){
+                    var element = renderHtml(obj.title, obj.text);
+                    $(".research-cards").append(element);
+                    $(".research-card:last").data('url', obj.url);
+               } 
+            });
+
+        });
+
+        function renderHtml(title, text) {
+            var htmlString = "<div class='research-card'>"
+                + "<div class='card-image' style='background-image: url(../image/research-01.jpg);'></div>"
+                + "<div class='research-title'>" + title + "</div>"
+                + "<div class='research-author'>" + text + "</div>"
+            "</div>";
+            return htmlString;
+        } 
+    </script>
 </head>
 
 <body class="research">
@@ -37,7 +89,9 @@
                     </div>
                 </a>
             </div>
-            <input class="esoe-search" placeholder="搜尋" type="text">
+            <form style="display: inline-block;" action="/search">
+                <input placeholder="搜尋" type="text" name="q" id="tipue_search_input" class="esoe-search" autocomplete="off" required>
+            </form>
         </div>
         <div class="right-panel-rwd"><i class="fa fa-bars" aria-hidden="true"></i></div>
     </div>
@@ -59,38 +113,32 @@
                 </div>
             </a>
             <div class="nav-li">
-                <input class="esoe-search" placeholder="搜尋" type="text">
+                <form style="display: inline-block;" action="/search">
+                    <input placeholder="搜尋" type="text" name="q" id="tipue_search_input" class="esoe-search" autocomplete="off" required>
+                </form>
             </div>
         </div>
     </div>
     <div class="screen">
-        <div class="background-container">
-        </div>
+        <div class="background-container"></div>
     </div>
     <div class="content-panel">
         <div class="content-tags">
             <div class="tags-border">
-                <div class="tag active">GRAPH</div>
-                <div class="tag">INTERNET</div>
-                <div class="tag">INTERNET</div>
-                <div class="tag">INTERNET</div>
-                <div class="tag">INTERNET</div>
-                <div class="tag">INTERNET</div>
-                <div class="tag">INTERNET</div>
+                <div year="all" class="tag active">全學年</div>
+                <div year="103" class="tag">103 學年</div>
+                <div year="102" class="tag">102 學年</div>
+                <div year="101" class="tag">101 學年</div>
+                <div year="100" class="tag">100 學年</div>
             </div>
         </div>
         <div class="research-cards">
+        <!--
             <div class="research-card">
                 <div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div>
                 <div class="research-title">Mining negative generalized knowledge from relational databases</div>
                 <div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div>
-            </div>
-<!--  -->
-<div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div><div class="research-card"><div class="card-image" style=" background-image: url(../image/research-01.jpg);"></div><div class="research-title">Mining negative generalized knowledge from relational databases</div><div class="research-author">Yu-Ying Wu , Yen-Liang Chen, Ray-I Chang</div></div>
-<!--  -->
-
-
-
+            </div>!-->
         </div>
     </div>
 </body>
