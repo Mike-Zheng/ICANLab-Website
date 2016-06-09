@@ -15,5 +15,5 @@ app.listen(app.get('port'), startInit());
 
 
 function startInit() {
-    console.log("start server");
+    console.log("NTU ican lab web start server\nOn 127.0.0.1:9527");
 }
