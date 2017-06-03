@@ -3,33 +3,33 @@ $(document).ready(function() {
     //     $('.esoe-search').css('padding', '10px 50px');
     // });
 var paper_dict={'arr':[
-{'url':'https://www.youtube.com','article':'有限誤差1','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'有限誤差1','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'有限誤差2','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'有限誤差3','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'有限誤差4','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'有限誤差5','writer':'張瑞益'},
-{'url':'https://www.youtube.com','article':'影像處理0','writer':'丁肇榮'},
-{'url':'https://www.youtube.com','article':'影像處理1','writer':'丁肇榮'},
-{'url':'https://www.youtube.com','article':'影像處理2','writer':'丁肇榮'},
-{'url':'https://www.youtube.com','article':'影像處理3','writer':'丁肇榮'},
-{'url':'https://www.youtube.com','article':'影像處理4','writer':'丁肇榮'},
-{'url':'https://www.youtube.com','article':'影像處理5','writer':'丁肇榮'},
+{'url':'https://www.youtube.com','article':'有限誤差1','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'有限誤差1','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'有限誤差2','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'有限誤差3','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'有限誤差4','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'有限誤差5','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理0','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理1','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理2','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理3','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理4','writer':'王小明'},
+{'url':'https://www.youtube.com','article':'影像處理5','writer':'王小明'},
 ]};
 var dictionary={'arr':[
-{'degree':'碩士','agent':'陳志昇','major':'數位學習','Grade':'碩1','picture':'url(../image/avatar02.jpg)'},
-{'degree':'碩士','agent':'張哲瑜','major':'資料視覺化','Grade':'碩1','picture':'url(../image/avatar03.jpg)'},
-{'degree':'碩士','agent':'陳延祥','major':'有限誤差','Grade':'碩1','picture':'url(../image/avatar04.jpg)'},
-{'degree':'碩士','agent':'何怡','major':'偕同過濾','Grade':'碩1','picture':'url(../image/avatar05.jpg)'},
-{'degree':'碩士','agent':'李育瑋','major':'有限誤差','Grade':'碩1','picture':'url(../image/avatar07.jpg)'},
-{'degree':'碩士','agent':'莊昀諺','major':'機器學習','Grade':'碩1','picture':'url(../image/avatar08.jpg)'},
-{'degree':'碩士','agent':'鄭力文','major':'前端工程','Grade':'碩1','picture':'url(../image/avatar09.jpg)'},
-{'degree':'碩士','agent':'李佳謙','major':'股票投資','Grade':'碩1','picture':'url(../image/avatar10.jpg)'},
-{'degree':'碩士','agent':'丁凡','major':'影像處理','Grade':'碩1','picture':'url(../image/avatar11.jpg)'}
+{'degree':'碩士','agent':'王小明','major':'數位學習','Grade':'碩1','picture':'url(image/avatar02.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'資料視覺化','Grade':'碩1','picture':'url(image/avatar03.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'有限誤差','Grade':'碩1','picture':'url(image/avatar04.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'偕同過濾','Grade':'碩1','picture':'url(image/avatar05.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'有限誤差','Grade':'碩1','picture':'url(image/avatar07.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'機器學習','Grade':'碩1','picture':'url(image/avatar08.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'前端工程','Grade':'碩1','picture':'url(image/avatar09.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'股票投資','Grade':'碩1','picture':'url(image/avatar10.jpg)'},
+{'degree':'碩士','agent':'王小明','major':'影像處理','Grade':'碩1','picture':'url(image/avatar11.jpg)'}
 ]};
 var dictionary_tea={'arr':[
-{'degree':'博士','agent':'張瑞益','major':'多媒體網路','Grade':'教授','picture':'url(../image/avatar12.jpg)'},
-{'degree':'博士','agent':'丁肇榮','major':'影像辨識','Grade':'教授','picture':'url(../image/avatar13.jpg)'},
+{'degree':'博士','agent':'王小明','major':'多媒體網路','Grade':'教授','picture':'url(image/avatar12.jpg)'},
+{'degree':'博士','agent':'王小明','major':'影像辨識','Grade':'教授','picture':'url(image/avatar13.jpg)'},
 ]};
 var ouput="";
 var target="";
