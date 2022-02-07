@@ -1,6 +1,8 @@
 # ICANLab-Website
 
-##檔案
+https://mike-zheng.github.io/ICANLab-Website/
+
+## 檔案
 
 ```js
 web
@@ -17,7 +19,7 @@ web
 
 ```
 
-##開發
+## 開發
 
 ```js
 $npm install --global gulp-cli
@@ -25,7 +27,7 @@ $npm install
 $gulp
 
 ```
-##運行
+## 運行
 
 ```js
 node ican
